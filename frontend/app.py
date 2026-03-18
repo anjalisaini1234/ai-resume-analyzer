@@ -11,7 +11,8 @@ from utils.report_generator import generate_report
 from utils.roadmap import generate_roadmap
 from utils.role_recommender import recommend_roles
 
-API_URL = "http://127.0.0.1:8000/analyze"
+
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/analyze")
 
 st.set_page_config(
     page_title="AI Resume Analyzer",
